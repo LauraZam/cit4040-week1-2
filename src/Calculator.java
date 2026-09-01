@@ -42,6 +42,12 @@ public class Calculator {
         System.out.println("Text: \"" + sampleText + "\" contains " + vowelCount + " vowels.");
 
 //        triggerNullPointer();
+
+        //Task 3.5: String comparison
+        System.out.println("\n--- Task 3.5: Safe String Comparison ---");
+        checkRole("admin");
+        checkRole(null);
+        checkRole("user");
     }
     public static double calculateTotal(double price, int quantity) {
         if (price < 0 || quantity < 0) {
@@ -57,5 +63,12 @@ public class Calculator {
     public static void triggerNullPointer() {
         String text = null;
         System.out.println(text.length()); // Task 3.4 Helper to trigger NullPointerException
+    }
+    public static void checkRole(String role) {
+        if ("admin".equals(role)) {
+            System.out.println("Access granted"); // Task 3.5 Role check method
+        } else {
+            System.out.println("Access denied");
+        }
     }
 }
