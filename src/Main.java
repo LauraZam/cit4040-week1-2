@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -27,5 +29,23 @@ public class Main {
             }
         }
         System.out.println("Number of books with more than 300 pages: " + over300Count);
+
+        Map<String, Integer> stockMap = new HashMap<>();
+        stockMap.put("Clean Code", 5);
+        stockMap.put("The Pragmatic Programmer", 3);
+        stockMap.put("Effective Java", 8);
+        stockMap.put("Java: A Beginner's Guide", 2);
+
+        System.out.println("\nTask 4.3: Stock Map");
+        String targetTitle = "Clean Code";
+        System.out.println("Copies of \"" + targetTitle + "\" in stock: " + stockMap.get(targetTitle));
+
+        int totalCopies = 0;
+        for (Map.Entry<String, Integer> entry : stockMap.entrySet()) {
+            System.out.println("Title: \"" + entry.getKey() + "\" | Stock: " + entry.getValue());
+            totalCopies += entry.getValue();
+        }
+
+        System.out.println("Total number of copies across all titles: " + totalCopies);
     }
 }
