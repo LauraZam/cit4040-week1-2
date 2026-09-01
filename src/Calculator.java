@@ -40,6 +40,8 @@ public class Calculator {
             }
         }
         System.out.println("Text: \"" + sampleText + "\" contains " + vowelCount + " vowels.");
+
+//        triggerNullPointer();
     }
     public static double calculateTotal(double price, int quantity) {
         if (price < 0 || quantity < 0) {
@@ -48,9 +50,12 @@ public class Calculator {
         }
         double total = price * quantity;
         if (quantity >= 10) {
-            total *= 0.90; // Apply 10% discount
+            total *= 0.90; // Task 3.2 Method implementation
         }
         return total;
     }
-    
+    public static void triggerNullPointer() {
+        String text = null;
+        System.out.println(text.length()); // Task 3.4 Helper to trigger NullPointerException
+    }
 }
