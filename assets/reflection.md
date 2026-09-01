@@ -1,0 +1,5 @@
+# Written Reflection (Task 4.6)
+
+The `Book` class and the `books` table share a fundamental relationship: both serve as structural blueprints for representing book entities, where the class fields (`title`, `author`, `pages`, `available`) directly correspond to the table columns. However, the Java class manages data in-memory within a running application runtime, whereas the database table persists that data reliably on disk across application restarts. 
+
+The database table can perform complex server-side operations that the Java class cannot natively do, such as executing rapid indexed queries across millions of records without loading them all into memory, and maintaining ACID-compliant transactional integrity across concurrent multi-user environments. Conversely, the Java class can encapsulate custom business logic, validation rules, and executable methods (such as custom string formatters or event triggers) directly alongside its state, which raw database tables cannot execute on their own without stored procedures.
