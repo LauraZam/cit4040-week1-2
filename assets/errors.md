@@ -52,11 +52,11 @@
 *   **Full Stack Trace:**
     ```text
     Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.length()" because "text" is null
-        at Calculator.triggerNullPointer(Calculator.java:65)
-        at Calculator.main(Calculator.java:44)
+        at main.java.Calculator.triggerNullPointer(main.java.Calculator.java:65)
+        at main.java.Calculator.main(main.java.Calculator.java:44)
     ```
 *   **Which file and which line caused the exception?**
-    *   File: `Calculator.java`, Line: `65`.
+    *   File: `main.java.Calculator.java`, Line: `65`.
 *   **Which line of the trace is the first one that mentions code you wrote?**
     *   `at Calculator.triggerNullPointer(Calculator.java:65)`.
 *   **What single change would prevent it?**

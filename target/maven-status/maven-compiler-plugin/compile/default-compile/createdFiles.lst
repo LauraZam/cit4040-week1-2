@@ -1,0 +1,6 @@
+BookSource.class
+Main.class
+Book.class
+Catalogue.class
+CsvBookSource.class
+InMemoryBookSource.class
