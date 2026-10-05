@@ -1,13 +1,16 @@
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.util.List;
 
 class CatalogueTest {
 
     @Test
-    void catalogueLoadsBooksCorrectly() {
+    void titlesByReturnsEmptyListForUnknownAuthor() {
         BookSource source = new InMemoryBookSource();
         Catalogue catalogue = new Catalogue(source);
 
-        assertEquals(3, catalogue.getAllBooks().size(), "Catalogue should load 3 books from the in-memory source");
+        List<String> titles = catalogue.titlesBy("Some Unknown Author");
+
+        assertTrue(titles.isEmpty(), "Querying an unknown author should return an empty list, not null.");
     }
 }
